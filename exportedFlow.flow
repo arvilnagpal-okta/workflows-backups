@@ -1,7 +1,7 @@
 {
   "type": "flopack",
   "version": "1.2.0",
-  "created": "2021-02-10T01:25:17.734Z",
+  "created": "2021-02-10T17:21:38.949Z",
   "flags": {
     "auto-transform": true,
     "looseBooleans": true,
@@ -10,13 +10,13 @@
   },
   "data": {
     "flos": {
-      "6f16470d-32fa-41cf-afb6-38800c031f71": {
-        "id": "6f16470d-32fa-41cf-afb6-38800c031f71",
+      "7cb1f655-c6f9-440f-a0c4-66b4dc0ca6f9": {
+        "id": "7cb1f655-c6f9-440f-a0c4-66b4dc0ca6f9",
         "name": "Exported Notification Flow",
         "description": "",
         "data": {
           "id": null,
-          "uuid": "6f16470d-32fa-41cf-afb6-38800c031f71",
+          "uuid": "7cb1f655-c6f9-440f-a0c4-66b4dc0ca6f9",
           "display": {
             "preview": [
               {
@@ -116,7 +116,7 @@
                     "description": null
                   },
                   "meta": {},
-                  "config": "b9cb875a-e80c-47f7-be79-b94b4a529b58",
+                  "config": "789d0c02-a57f-4f60-9820-ad2578fea246",
                   "partnerChannelKeys": 103,
                   "inputs": {
                     "extensible": false,
@@ -1339,7 +1339,7 @@
                                       "description": null
                                     },
                                     "meta": {},
-                                    "config": "e76f36a6-5232-4c2c-8c02-0a2980cd561b",
+                                    "config": "8bfc01d6-770e-4624-9c2b-5245e0bd21fc",
                                     "partnerChannelKeys": 187,
                                     "inputs": {
                                       "extensible": false,
@@ -1874,7 +1874,7 @@
           "log": true,
           "inheritLog": true,
           "scheduled": false,
-          "group": "edd00d6c-5c16-41f6-b4db-464ea5e5239b",
+          "group": "8d230544-c1c4-4deb-8206-bbeb2d3dc1aa",
           "templateName": null,
           "connector_method_meta": {
             "inputs": {},
@@ -1886,23 +1886,23 @@
       }
     },
     "configs": {
-      "b9cb875a-e80c-47f7-be79-b94b4a529b58": {
-        "id": "b9cb875a-e80c-47f7-be79-b94b4a529b58",
-        "name": "Okta",
-        "module": "okta",
-        "data": null
-      },
-      "e76f36a6-5232-4c2c-8c02-0a2980cd561b": {
-        "id": "e76f36a6-5232-4c2c-8c02-0a2980cd561b",
+      "8bfc01d6-770e-4624-9c2b-5245e0bd21fc": {
+        "id": "8bfc01d6-770e-4624-9c2b-5245e0bd21fc",
         "name": "Arvil's Gmail Connection",
         "module": "gmail",
+        "data": null
+      },
+      "789d0c02-a57f-4f60-9820-ad2578fea246": {
+        "id": "789d0c02-a57f-4f60-9820-ad2578fea246",
+        "name": "Okta",
+        "module": "okta",
         "data": null
       }
     },
     "tables": {},
     "groups": {
-      "edd00d6c-5c16-41f6-b4db-464ea5e5239b": {
-        "id": "edd00d6c-5c16-41f6-b4db-464ea5e5239b",
+      "8d230544-c1c4-4deb-8206-bbeb2d3dc1aa": {
+        "id": "8d230544-c1c4-4deb-8206-bbeb2d3dc1aa",
         "data": {
           "name": "Flow Versioning",
           "description": "",
