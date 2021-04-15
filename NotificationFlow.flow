@@ -1,7 +1,7 @@
 {
   "type": "flopack",
-  "version": "1.2.0",
-  "created": "2021-02-24T20:00:21.070Z",
+  "version": "1.3.0",
+  "created": "2021-04-15T18:23:38.508Z",
   "flags": {
     "auto-transform": true,
     "looseBooleans": true,
@@ -10,13 +10,13 @@
   },
   "data": {
     "flos": {
-      "fb337f2c-b1d3-4f3e-bcd9-20428c311885": {
-        "id": "fb337f2c-b1d3-4f3e-bcd9-20428c311885",
+      "403cce86-cbb0-41e5-9c2b-45e9f643fd99": {
+        "id": "403cce86-cbb0-41e5-9c2b-45e9f643fd99",
         "name": "Exported Notification Flow",
         "description": "",
         "data": {
           "id": null,
-          "uuid": "fb337f2c-b1d3-4f3e-bcd9-20428c311885",
+          "uuid": "403cce86-cbb0-41e5-9c2b-45e9f643fd99",
           "display": {
             "preview": [
               {
@@ -106,7 +106,7 @@
                     "description": null
                   },
                   "meta": {},
-                  "config": "0388c949-1ec0-4e93-a3c1-1eb135bc2ada",
+                  "config": "a97e8fc1-01ec-4cbd-9d6c-8f883fa46c80",
                   "partnerChannelKeys": 152,
                   "inputs": {
                     "extensible": false,
@@ -1576,7 +1576,7 @@
           "log": true,
           "inheritLog": true,
           "scheduled": false,
-          "group": "48fcfff8-ae18-4dd5-ab14-1c13b2772375",
+          "group": "80903d0d-3212-46e8-90ba-6e2919571822",
           "templateName": null,
           "connector_method_meta": {
             "inputs": {},
@@ -1588,8 +1588,8 @@
       }
     },
     "configs": {
-      "0388c949-1ec0-4e93-a3c1-1eb135bc2ada": {
-        "id": "0388c949-1ec0-4e93-a3c1-1eb135bc2ada",
+      "a97e8fc1-01ec-4cbd-9d6c-8f883fa46c80": {
+        "id": "a97e8fc1-01ec-4cbd-9d6c-8f883fa46c80",
         "name": "Okta",
         "module": "okta",
         "data": null
@@ -1597,8 +1597,8 @@
     },
     "tables": {},
     "groups": {
-      "48fcfff8-ae18-4dd5-ab14-1c13b2772375": {
-        "id": "48fcfff8-ae18-4dd5-ab14-1c13b2772375",
+      "80903d0d-3212-46e8-90ba-6e2919571822": {
+        "id": "80903d0d-3212-46e8-90ba-6e2919571822",
         "data": {
           "name": "Versioning for Flows and Folders",
           "description": "",
@@ -1606,5 +1606,6 @@
         }
       }
     }
-  }
+  },
+  "checksum": "13aa4decd787c36a9bda5b40c555e4fb5951b6d9d07b34ff6dce14e6cb3f0dc8"
 }
