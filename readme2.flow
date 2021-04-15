@@ -1,0 +1,1611 @@
+{
+  "type": "flopack",
+  "version": "1.3.0",
+  "created": "2021-04-15T18:25:11.992Z",
+  "flags": {
+    "auto-transform": true,
+    "looseBooleans": true,
+    "looseStrings": true,
+    "looseNulls": true
+  },
+  "data": {
+    "flos": {
+      "835d813b-8dca-4eb1-b0b5-d2b3b426f8a9": {
+        "id": "835d813b-8dca-4eb1-b0b5-d2b3b426f8a9",
+        "name": "Exported Notification Flow",
+        "description": "",
+        "data": {
+          "id": null,
+          "uuid": "835d813b-8dca-4eb1-b0b5-d2b3b426f8a9",
+          "display": {
+            "preview": [
+              {
+                "module": "okta",
+                "name": "",
+                "kernel": true
+              },
+              {
+                "module": "string",
+                "name": "compose",
+                "kernel": true
+              },
+              {
+                "module": "gmail",
+                "name": "sendEmail2",
+                "kernel": false
+              }
+            ],
+            "isCallable": false
+          },
+          "tree": {
+            "id": 1,
+            "name": "all"
+          },
+          "methods": [
+            {
+              "joins": {},
+              "address": "root:channels:http:okta:1.0.348:apiTokenCreated",
+              "parents": {
+                "version": {
+                  "address": "root:channels:http:okta:1.0.348",
+                  "key": "1.0.348",
+                  "data": {
+                    "name": "1.0.348",
+                    "id": 279
+                  }
+                },
+                "channel": {
+                  "address": "root:channels:http:okta",
+                  "key": "okta",
+                  "data": {
+                    "name": "okta",
+                    "id": 17
+                  }
+                }
+              },
+              "uuid": "Cdw5tYmby",
+              "branches": {},
+              "node": {
+                "key": "apiTokenCreated",
+                "data": {
+                  "name": "API Token Created"
+                },
+                "model": {
+                  "type": "method",
+                  "_v": 2,
+                  "key": "apiTokenCreated",
+                  "executable": true,
+                  "displayed": true,
+                  "async": true,
+                  "cooperative": false,
+                  "mirrored": false,
+                  "compat": false,
+                  "inlined": false,
+                  "dependencies": [],
+                  "timeout": 30000,
+                  "idempotent": false,
+                  "monitor": false,
+                  "webhook": true,
+                  "webhookList": true,
+                  "webhookConditions": {
+                    "where": [
+                      "headers"
+                    ],
+                    "key": "x-okta-verification-challenge"
+                  },
+                  "mobile": false,
+                  "hooks": {},
+                  "policy": {
+                    "error": {
+                      "type": "finish"
+                    }
+                  },
+                  "metadata": {
+                    "id": 15546,
+                    "name": "API Token Created",
+                    "description": null
+                  },
+                  "meta": {},
+                  "config": "03819c27-55b6-4514-a523-d1d1be302bdb",
+                  "partnerChannelKeys": 152,
+                  "inputs": {
+                    "extensible": false,
+                    "rules": {},
+                    "groupRules": {},
+                    "data": {
+                      "QYa3tjOgSo": {
+                        "id": "QYa3tjOgSo",
+                        "group": null,
+                        "key": "type",
+                        "value": {
+                          "error": false,
+                          "proxy": false,
+                          "check": false,
+                          "type": "string",
+                          "collection": false,
+                          "data": "invoke",
+                          "available": []
+                        },
+                        "required": false,
+                        "ref": false,
+                        "metadata": {
+                          "forceHide": true,
+                          "index": 0
+                        },
+                        "flags": "d"
+                      },
+                      "DoUGhGVhSS": {
+                        "id": "DoUGhGVhSS",
+                        "group": null,
+                        "key": "data",
+                        "value": {
+                          "error": false,
+                          "proxy": false,
+                          "check": false,
+                          "type": "object",
+                          "collection": false,
+                          "data": {},
+                          "available": []
+                        },
+                        "required": false,
+                        "ref": false,
+                        "metadata": {
+                          "forceHide": true,
+                          "index": 1
+                        },
+                        "flags": "d"
+                      }
+                    }
+                  },
+                  "outputs": {
+                    "extensible": false,
+                    "rules": {},
+                    "groupRules": {
+                      "context": {
+                        "extensible": false
+                      }
+                    },
+                    "data": {
+                      "CipguLrqN1": {
+                        "id": "CipguLrqN1",
+                        "group": null,
+                        "key": "collection",
+                        "value": {
+                          "error": false,
+                          "type": {
+                            "Output": {
+                              "type": {
+                                "Date and Time": {
+                                  "type": "string",
+                                  "collection": false
+                                },
+                                "Message": {
+                                  "type": "string",
+                                  "collection": false
+                                },
+                                "Event ID": {
+                                  "type": "string",
+                                  "collection": false
+                                },
+                                "Event Type": {
+                                  "type": "string",
+                                  "collection": false
+                                },
+                                "Event Time": {
+                                  "type": "string",
+                                  "collection": false
+                                },
+                                "Version": {
+                                  "type": "string",
+                                  "collection": false
+                                },
+                                "Actor": {
+                                  "type": {
+                                    "ID": {
+                                      "type": "string",
+                                      "collection": false
+                                    },
+                                    "Alternate ID": {
+                                      "type": "string",
+                                      "collection": false
+                                    },
+                                    "Display Name": {
+                                      "type": "string",
+                                      "collection": false
+                                    },
+                                    "Type": {
+                                      "type": "string",
+                                      "collection": false
+                                    }
+                                  },
+                                  "collection": false
+                                },
+                                "API Token": {
+                                  "type": {
+                                    "ID": {
+                                      "type": "string",
+                                      "collection": false
+                                    },
+                                    "Alternate ID": {
+                                      "type": "string",
+                                      "collection": false
+                                    },
+                                    "Display Name": {
+                                      "type": "string",
+                                      "collection": false
+                                    },
+                                    "Type": {
+                                      "type": "string",
+                                      "collection": false
+                                    }
+                                  },
+                                  "collection": false
+                                },
+                                "UUID": {
+                                  "type": "string",
+                                  "collection": false
+                                },
+                                "Event Details": {
+                                  "type": "object",
+                                  "collection": false
+                                },
+                                "Headers": {
+                                  "type": "object",
+                                  "collection": false
+                                },
+                                "Source": {
+                                  "type": "string",
+                                  "collection": false
+                                },
+                                "Debug Context": {
+                                  "type": {
+                                    "Debug Data": {
+                                      "type": "object",
+                                      "collection": false
+                                    }
+                                  },
+                                  "collection": false
+                                }
+                              },
+                              "collection": false
+                            }
+                          },
+                          "collection": true,
+                          "data": [],
+                          "available": []
+                        },
+                        "ref": true,
+                        "metadata": {
+                          "forceHide": false,
+                          "displayname": "list",
+                          "index": 0
+                        },
+                        "_used": true
+                      },
+                      "zlYwYKzXaQ-": {
+                        "id": "zlYwYKzXaQ-",
+                        "group": "context",
+                        "key": "execution_id",
+                        "value": {
+                          "error": false,
+                          "type": "string",
+                          "collection": false,
+                          "data": null,
+                          "available": []
+                        },
+                        "ref": false,
+                        "metadata": {
+                          "displayname": "Execution ID",
+                          "index": 1
+                        }
+                      }
+                    }
+                  },
+                  "runtime": {},
+                  "display": {},
+                  "comments": "API Token Created event will trigger when an API token is created in Okta. This webhook is triggered in Okta.",
+                  "enableNewMetadata": true
+                }
+              },
+              "pins": {
+                "CipguLrqN1": {
+                  "v_amk3ph4F": [
+                    {
+                      "input": "8WfE172OEa",
+                      "transform": null
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "joins": {},
+              "address": "root:kernel:list:0.0.1:asyncEach",
+              "parents": {
+                "version": {
+                  "address": "root:kernel:list:0.0.1",
+                  "key": "0.0.1",
+                  "data": {
+                    "name": "0.0.1"
+                  }
+                },
+                "channel": {
+                  "address": "root:kernel:list",
+                  "key": "list",
+                  "data": {
+                    "name": "list"
+                  }
+                }
+              },
+              "uuid": "v_amk3ph4F",
+              "branches": {},
+              "node": {
+                "key": "asyncEach",
+                "data": {
+                  "name": "For Each - Ignore Errors"
+                },
+                "model": {
+                  "type": "method",
+                  "_v": 2,
+                  "key": "asyncEach",
+                  "executable": false,
+                  "displayed": true,
+                  "async": true,
+                  "cooperative": true,
+                  "mirrored": false,
+                  "inlined": false,
+                  "dependencies": [],
+                  "timeout": 300000,
+                  "idempotent": false,
+                  "monitor": false,
+                  "webhook": false,
+                  "webhookList": false,
+                  "webhookConditions": false,
+                  "mobile": false,
+                  "hooks": {},
+                  "policy": {
+                    "error": {
+                      "type": "finish"
+                    }
+                  },
+                  "metadata": {
+                    "id": null,
+                    "name": "For Each - Ignore Errors",
+                    "description": "Process items in a list by calling a Flow for each item, continuing through all items in the list even if one of them causes an error in the child Flow (aka For Each Async)."
+                  },
+                  "meta": {},
+                  "config": null,
+                  "partnerChannelKeys": null,
+                  "inputs": {
+                    "extensible": false,
+                    "rules": {
+                      "list": {
+                        "types": [
+                          "*"
+                        ],
+                        "collection": true
+                      }
+                    },
+                    "groupRules": {
+                      "context": {
+                        "type": "object",
+                        "reserved": {
+                          "index": "number"
+                        },
+                        "extensible": true
+                      }
+                    },
+                    "data": {
+                      "8WfE172OEa": {
+                        "id": "8WfE172OEa",
+                        "group": null,
+                        "key": "list",
+                        "value": {
+                          "type": "object",
+                          "collection": true,
+                          "data": null,
+                          "available": [
+                            "*"
+                          ]
+                        },
+                        "required": true,
+                        "ref": false,
+                        "metadata": {
+                          "index": 0
+                        },
+                        "flags": "d"
+                      },
+                      "2r9tVf2Hhi": {
+                        "id": "2r9tVf2Hhi",
+                        "group": null,
+                        "key": "flo",
+                        "value": {
+                          "type": "flo",
+                          "collection": false,
+                          "data": {
+                            "id": "4a51b332-3ad0-4a00-8846-147811ea1f5f",
+                            "uuid": "4a51b332-3ad0-4a00-8846-147811ea1f5f",
+                            "display": {
+                              "aliases": {
+                                "w7sNCQkk6x": "okta"
+                              }
+                            },
+                            "tree": {
+                              "id": 1,
+                              "name": "all"
+                            },
+                            "methods": [
+                              {
+                                "joins": {},
+                                "address": "root:kernel:control:0.0.1:callable",
+                                "parents": {
+                                  "version": {
+                                    "address": "root:kernel:control:0.0.1",
+                                    "key": "0.0.1",
+                                    "data": {
+                                      "name": "0.0.1"
+                                    }
+                                  },
+                                  "channel": {
+                                    "address": "root:kernel:control",
+                                    "key": "control",
+                                    "data": {
+                                      "name": "control"
+                                    }
+                                  }
+                                },
+                                "uuid": "w7sNCQkk6x",
+                                "branches": {},
+                                "node": {
+                                  "key": "callable",
+                                  "data": {
+                                    "name": "API Token Created"
+                                  },
+                                  "model": {
+                                    "type": "method",
+                                    "_v": 2,
+                                    "key": "callable",
+                                    "executable": false,
+                                    "displayed": true,
+                                    "async": false,
+                                    "cooperative": false,
+                                    "mirrored": true,
+                                    "inlined": false,
+                                    "dependencies": [],
+                                    "timeout": 30000,
+                                    "idempotent": false,
+                                    "monitor": false,
+                                    "webhook": false,
+                                    "webhookList": false,
+                                    "webhookConditions": false,
+                                    "mobile": false,
+                                    "hooks": {},
+                                    "policy": {
+                                      "error": {
+                                        "type": "finish"
+                                      }
+                                    },
+                                    "metadata": {
+                                      "id": null,
+                                      "name": "API Token Created",
+                                      "description": "Start a Flow that executes on-demand, i.e. called by another Flow or via the Invoke API."
+                                    },
+                                    "meta": {},
+                                    "config": null,
+                                    "partnerChannelKeys": null,
+                                    "inputs": {
+                                      "extensible": true,
+                                      "rules": {
+                                        "*": {
+                                          "collection": false
+                                        }
+                                      },
+                                      "groupRules": {
+                                        "body": {
+                                          "type": "object",
+                                          "reserved": {},
+                                          "extensible": true
+                                        },
+                                        "headers": {
+                                          "type": "object",
+                                          "reserved": {
+                                            "Content-Type": "string"
+                                          },
+                                          "extensible": true
+                                        },
+                                        "query": {
+                                          "type": "object",
+                                          "reserved": {},
+                                          "extensible": true
+                                        }
+                                      },
+                                      "data": {
+                                        "DJtUVuGjdr": {
+                                          "id": "DJtUVuGjdr",
+                                          "group": "context",
+                                          "key": "execution_id",
+                                          "value": {
+                                            "error": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "displayname": "Execution ID",
+                                            "index": 0
+                                          },
+                                          "required": false,
+                                          "flags": "d"
+                                        },
+                                        "poiQY2Nmrc": {
+                                          "id": "poiQY2Nmrc",
+                                          "group": "Output",
+                                          "key": "Date and Time",
+                                          "value": {
+                                            "error": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 1
+                                          },
+                                          "required": false,
+                                          "flags": "d"
+                                        },
+                                        "CEMwVh5WM4": {
+                                          "id": "CEMwVh5WM4",
+                                          "group": "Output",
+                                          "key": "Message",
+                                          "value": {
+                                            "error": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 2
+                                          },
+                                          "required": false,
+                                          "flags": "d"
+                                        },
+                                        "asTalqGgC56": {
+                                          "id": "asTalqGgC56",
+                                          "group": "Output",
+                                          "key": "Event ID",
+                                          "value": {
+                                            "error": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 3
+                                          },
+                                          "required": false,
+                                          "flags": "d"
+                                        },
+                                        "x_dWP5C4ICV": {
+                                          "id": "x_dWP5C4ICV",
+                                          "group": "Output",
+                                          "key": "Event Type",
+                                          "value": {
+                                            "error": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 4
+                                          },
+                                          "required": false,
+                                          "flags": "d"
+                                        },
+                                        "VJfE2rItfv_": {
+                                          "id": "VJfE2rItfv_",
+                                          "group": "Output",
+                                          "key": "Event Time",
+                                          "value": {
+                                            "error": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 5
+                                          },
+                                          "required": false,
+                                          "flags": "d"
+                                        },
+                                        "cqEdcew1HpJ": {
+                                          "id": "cqEdcew1HpJ",
+                                          "group": "Output",
+                                          "key": "Version",
+                                          "value": {
+                                            "error": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 6
+                                          },
+                                          "required": false,
+                                          "flags": "d"
+                                        },
+                                        "VwlUhxZl-J9": {
+                                          "id": "VwlUhxZl-J9",
+                                          "group": "Output",
+                                          "key": "Actor",
+                                          "value": {
+                                            "error": false,
+                                            "type": {
+                                              "ID": {
+                                                "type": "string",
+                                                "collection": false
+                                              },
+                                              "Alternate ID": {
+                                                "type": "string",
+                                                "collection": false
+                                              },
+                                              "Display Name": {
+                                                "type": "string",
+                                                "collection": false
+                                              },
+                                              "Type": {
+                                                "type": "string",
+                                                "collection": false
+                                              }
+                                            },
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 7
+                                          },
+                                          "required": false,
+                                          "flags": "d"
+                                        },
+                                        "vETZBVCVozv": {
+                                          "id": "vETZBVCVozv",
+                                          "group": "Output",
+                                          "key": "API Token",
+                                          "value": {
+                                            "error": false,
+                                            "type": {
+                                              "ID": {
+                                                "type": "string",
+                                                "collection": false
+                                              },
+                                              "Alternate ID": {
+                                                "type": "string",
+                                                "collection": false
+                                              },
+                                              "Display Name": {
+                                                "type": "string",
+                                                "collection": false
+                                              },
+                                              "Type": {
+                                                "type": "string",
+                                                "collection": false
+                                              }
+                                            },
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 8
+                                          },
+                                          "required": false,
+                                          "flags": "d"
+                                        },
+                                        "s_NqCYH9i9n": {
+                                          "id": "s_NqCYH9i9n",
+                                          "group": "Output",
+                                          "key": "UUID",
+                                          "value": {
+                                            "error": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 9
+                                          },
+                                          "required": false,
+                                          "flags": "d"
+                                        },
+                                        "OCZxXpra6DT": {
+                                          "id": "OCZxXpra6DT",
+                                          "group": "Output",
+                                          "key": "Event Details",
+                                          "value": {
+                                            "error": false,
+                                            "type": "object",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 10
+                                          },
+                                          "required": false,
+                                          "flags": "d"
+                                        },
+                                        "Tc8RfYOC0Z7": {
+                                          "id": "Tc8RfYOC0Z7",
+                                          "group": "Output",
+                                          "key": "Headers",
+                                          "value": {
+                                            "error": false,
+                                            "type": "object",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 11
+                                          },
+                                          "required": false,
+                                          "flags": "d"
+                                        },
+                                        "bXQHodcmhS2": {
+                                          "id": "bXQHodcmhS2",
+                                          "group": "Output",
+                                          "key": "Source",
+                                          "value": {
+                                            "error": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 12
+                                          },
+                                          "required": false,
+                                          "flags": "d"
+                                        },
+                                        "y9nw0SrjNh6": {
+                                          "id": "y9nw0SrjNh6",
+                                          "group": "Output",
+                                          "key": "Debug Context",
+                                          "value": {
+                                            "error": false,
+                                            "type": {
+                                              "Debug Data": {
+                                                "type": "object",
+                                                "collection": false
+                                              }
+                                            },
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 13
+                                          },
+                                          "required": false,
+                                          "flags": "d"
+                                        }
+                                      }
+                                    },
+                                    "outputs": {
+                                      "extensible": true,
+                                      "rules": {
+                                        "*": {
+                                          "collection": false
+                                        }
+                                      },
+                                      "data": {
+                                        "319Y7cqtGL": {
+                                          "id": "319Y7cqtGL",
+                                          "group": "context",
+                                          "key": "execution_id",
+                                          "value": {
+                                            "error": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "displayname": "Execution ID",
+                                            "index": 0
+                                          }
+                                        },
+                                        "5YZFgDUpGS": {
+                                          "id": "5YZFgDUpGS",
+                                          "group": "Output",
+                                          "key": "Date and Time",
+                                          "value": {
+                                            "error": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 1
+                                          }
+                                        },
+                                        "tnu4pX1qwb": {
+                                          "id": "tnu4pX1qwb",
+                                          "group": "Output",
+                                          "key": "Message",
+                                          "value": {
+                                            "error": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 2
+                                          }
+                                        },
+                                        "a_Qos3EMYT": {
+                                          "id": "a_Qos3EMYT",
+                                          "group": "Output",
+                                          "key": "Event ID",
+                                          "value": {
+                                            "error": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 3
+                                          }
+                                        },
+                                        "nBSQfXK8dwB": {
+                                          "id": "nBSQfXK8dwB",
+                                          "group": "Output",
+                                          "key": "Event Type",
+                                          "value": {
+                                            "error": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 4
+                                          }
+                                        },
+                                        "U99cCximdKE": {
+                                          "id": "U99cCximdKE",
+                                          "group": "Output",
+                                          "key": "Event Time",
+                                          "value": {
+                                            "error": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 5
+                                          }
+                                        },
+                                        "J8pRmX4Kupr": {
+                                          "id": "J8pRmX4Kupr",
+                                          "group": "Output",
+                                          "key": "Version",
+                                          "value": {
+                                            "error": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 6
+                                          }
+                                        },
+                                        "Ti6fg0Q0hub": {
+                                          "id": "Ti6fg0Q0hub",
+                                          "group": "Output",
+                                          "key": "Actor",
+                                          "value": {
+                                            "error": false,
+                                            "type": {
+                                              "ID": {
+                                                "type": "string",
+                                                "collection": false
+                                              },
+                                              "Alternate ID": {
+                                                "type": "string",
+                                                "collection": false
+                                              },
+                                              "Display Name": {
+                                                "type": "string",
+                                                "collection": false
+                                              },
+                                              "Type": {
+                                                "type": "string",
+                                                "collection": false
+                                              }
+                                            },
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 7
+                                          }
+                                        },
+                                        "IWki9q9_rif": {
+                                          "id": "IWki9q9_rif",
+                                          "group": "Output",
+                                          "key": "API Token",
+                                          "value": {
+                                            "error": false,
+                                            "type": {
+                                              "ID": {
+                                                "type": "string",
+                                                "collection": false
+                                              },
+                                              "Alternate ID": {
+                                                "type": "string",
+                                                "collection": false
+                                              },
+                                              "Display Name": {
+                                                "type": "string",
+                                                "collection": false
+                                              },
+                                              "Type": {
+                                                "type": "string",
+                                                "collection": false
+                                              }
+                                            },
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 8
+                                          }
+                                        },
+                                        "TsOq4Q6_LDP": {
+                                          "id": "TsOq4Q6_LDP",
+                                          "group": "Output",
+                                          "key": "UUID",
+                                          "value": {
+                                            "error": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 9
+                                          }
+                                        },
+                                        "p_J1_xfAUmw": {
+                                          "id": "p_J1_xfAUmw",
+                                          "group": "Output",
+                                          "key": "Event Details",
+                                          "value": {
+                                            "error": false,
+                                            "type": "object",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 10
+                                          }
+                                        },
+                                        "GmH4EdLet5n": {
+                                          "id": "GmH4EdLet5n",
+                                          "group": "Output",
+                                          "key": "Headers",
+                                          "value": {
+                                            "error": false,
+                                            "type": "object",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 11
+                                          }
+                                        },
+                                        "VSt1cDyQOYf": {
+                                          "id": "VSt1cDyQOYf",
+                                          "group": "Output",
+                                          "key": "Source",
+                                          "value": {
+                                            "error": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 12
+                                          }
+                                        },
+                                        "NdD0Jkcp_bW": {
+                                          "id": "NdD0Jkcp_bW",
+                                          "group": "Output",
+                                          "key": "Debug Context",
+                                          "value": {
+                                            "error": false,
+                                            "type": {
+                                              "Debug Data": {
+                                                "type": "object",
+                                                "collection": false
+                                              }
+                                            },
+                                            "collection": false,
+                                            "data": null,
+                                            "available": []
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 13
+                                          }
+                                        }
+                                      },
+                                      "groupRules": {
+                                        "context": {
+                                          "extensible": false
+                                        },
+                                        "null": {
+                                          "extensible": false
+                                        },
+                                        "*": {
+                                          "extensible": false
+                                        }
+                                      }
+                                    },
+                                    "runtime": {},
+                                    "comments": "API Token Created event will trigger when an API token is created in Okta. This webhook is triggered in Okta."
+                                  }
+                                },
+                                "pins": {}
+                              },
+                              {
+                                "joins": {},
+                                "address": "root:kernel:string:0.0.1:compose",
+                                "parents": {
+                                  "version": {
+                                    "address": "root:kernel:string:0.0.1",
+                                    "key": "0.0.1",
+                                    "data": {
+                                      "name": "0.0.1"
+                                    }
+                                  },
+                                  "channel": {
+                                    "address": "root:kernel:string",
+                                    "key": "string",
+                                    "data": {
+                                      "name": "string"
+                                    }
+                                  }
+                                },
+                                "uuid": "Ys-ri8GzO",
+                                "branches": {},
+                                "node": {
+                                  "key": "compose",
+                                  "data": {
+                                    "name": "Compose"
+                                  },
+                                  "model": {
+                                    "type": "method",
+                                    "_v": 2,
+                                    "key": "compose",
+                                    "executable": false,
+                                    "displayed": true,
+                                    "async": false,
+                                    "cooperative": false,
+                                    "mirrored": false,
+                                    "inlined": false,
+                                    "dependencies": [],
+                                    "timeout": 90000,
+                                    "idempotent": false,
+                                    "monitor": false,
+                                    "webhook": false,
+                                    "webhookList": false,
+                                    "webhookConditions": false,
+                                    "mobile": false,
+                                    "hooks": {},
+                                    "policy": {
+                                      "error": {
+                                        "type": "finish"
+                                      }
+                                    },
+                                    "metadata": {
+                                      "id": null,
+                                      "name": "Compose",
+                                      "description": "Enter free form text and optionally drag fields into your text like a mail merge."
+                                    },
+                                    "meta": {},
+                                    "config": null,
+                                    "partnerChannelKeys": null,
+                                    "inputs": {
+                                      "extensible": true,
+                                      "rules": {
+                                        "*": {
+                                          "types": [
+                                            "string"
+                                          ],
+                                          "collection": false
+                                        }
+                                      },
+                                      "data": {
+                                        "TuQ4iVBwk-": {
+                                          "id": "TuQ4iVBwk-",
+                                          "group": null,
+                                          "key": "_text_",
+                                          "value": {
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": "Hey {{{c8BsD2Yen}}},\n\nYou've been notified. \n\nThis is an update version of this compose card. ",
+                                            "available": [],
+                                            "error": false
+                                          },
+                                          "required": true,
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 0
+                                          },
+                                          "flags": "d"
+                                        },
+                                        "PJJRYUgMbc": {
+                                          "id": "PJJRYUgMbc",
+                                          "group": null,
+                                          "key": "c8BsD2Yen",
+                                          "value": {
+                                            "error": false,
+                                            "proxy": false,
+                                            "check": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": "",
+                                            "available": [
+                                              "string"
+                                            ]
+                                          },
+                                          "required": false,
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 1,
+                                            "ghost": {
+                                              "displayChannelName": "okta",
+                                              "displayName": "Display Name",
+                                              "id": "CGP2E50QZgM@Display Name"
+                                            }
+                                          },
+                                          "flags": "d"
+                                        }
+                                      }
+                                    },
+                                    "outputs": {
+                                      "extensible": false,
+                                      "data": {
+                                        "68xmqrJRVe": {
+                                          "id": "68xmqrJRVe",
+                                          "group": null,
+                                          "key": "output",
+                                          "value": {
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": ""
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 0
+                                          },
+                                          "_used": true
+                                        }
+                                      }
+                                    },
+                                    "runtime": {}
+                                  }
+                                },
+                                "pins": {
+                                  "68xmqrJRVe": {
+                                    "OPrfi3MrM": [
+                                      {
+                                        "input": "FH2otLcsUO",
+                                        "transform": null
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "joins": {},
+                                "address": "root:channels:http:gmail:1.3.123:sendEmail2",
+                                "parents": {
+                                  "version": {
+                                    "address": "root:channels:http:gmail:1.3.123",
+                                    "key": "1.3.123",
+                                    "data": {
+                                      "name": "1.3.123"
+                                    }
+                                  },
+                                  "channel": {
+                                    "address": "root:channels:http:gmail",
+                                    "key": "gmail",
+                                    "data": {
+                                      "name": "gmail"
+                                    }
+                                  }
+                                },
+                                "uuid": "OPrfi3MrM",
+                                "branches": {},
+                                "node": {
+                                  "key": "sendEmail2",
+                                  "data": {
+                                    "name": "Send Email"
+                                  },
+                                  "model": {
+                                    "type": "method",
+                                    "_v": 2,
+                                    "key": "sendEmail2",
+                                    "executable": true,
+                                    "displayed": true,
+                                    "async": true,
+                                    "cooperative": false,
+                                    "mirrored": false,
+                                    "compat": false,
+                                    "inlined": false,
+                                    "dependencies": [],
+                                    "timeout": 30000,
+                                    "idempotent": false,
+                                    "monitor": false,
+                                    "webhook": false,
+                                    "webhookList": false,
+                                    "webhookConditions": false,
+                                    "mobile": false,
+                                    "hooks": {},
+                                    "policy": {
+                                      "error": {
+                                        "type": "finish"
+                                      }
+                                    },
+                                    "metadata": {
+                                      "id": 41727,
+                                      "name": "Send Email",
+                                      "description": null
+                                    },
+                                    "meta": {},
+                                    "config": null,
+                                    "partnerChannelKeys": 187,
+                                    "inputs": {
+                                      "extensible": false,
+                                      "rules": {},
+                                      "groupRules": {
+                                        "Email": {
+                                          "extensible": false,
+                                          "reserved": {},
+                                          "index": 0,
+                                          "type": "object"
+                                        }
+                                      },
+                                      "data": {
+                                        "2bXNUh2NUn": {
+                                          "id": "2bXNUh2NUn",
+                                          "group": "Email",
+                                          "key": "To",
+                                          "value": {
+                                            "error": false,
+                                            "proxy": false,
+                                            "check": false,
+                                            "type": "string",
+                                            "collection": true,
+                                            "data": [
+                                              "arvil.nagpal@okta.com"
+                                            ],
+                                            "available": [
+                                              "string"
+                                            ]
+                                          },
+                                          "required": true,
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 0,
+                                            "optional": false
+                                          },
+                                          "flags": "d"
+                                        },
+                                        "PHG6dX92EZ": {
+                                          "id": "PHG6dX92EZ",
+                                          "group": "Email",
+                                          "key": "CC",
+                                          "value": {
+                                            "error": false,
+                                            "proxy": false,
+                                            "check": false,
+                                            "type": "string",
+                                            "collection": true,
+                                            "data": [],
+                                            "available": [
+                                              "string"
+                                            ]
+                                          },
+                                          "required": false,
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 1,
+                                            "optional": false
+                                          },
+                                          "flags": "d"
+                                        },
+                                        "pjJ58H-TlJ": {
+                                          "id": "pjJ58H-TlJ",
+                                          "group": "Email",
+                                          "key": "Subject",
+                                          "value": {
+                                            "error": false,
+                                            "proxy": false,
+                                            "check": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": "NOTIFICATION",
+                                            "available": [
+                                              "string"
+                                            ]
+                                          },
+                                          "required": false,
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 2,
+                                            "optional": false
+                                          },
+                                          "flags": "d"
+                                        },
+                                        "FH2otLcsUO": {
+                                          "id": "FH2otLcsUO",
+                                          "group": "Email",
+                                          "key": "Body",
+                                          "value": {
+                                            "error": false,
+                                            "proxy": false,
+                                            "check": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": "",
+                                            "available": [
+                                              "string"
+                                            ]
+                                          },
+                                          "required": false,
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 3,
+                                            "optional": false
+                                          },
+                                          "flags": "d"
+                                        },
+                                        "yziqyxExlz": {
+                                          "id": "yziqyxExlz",
+                                          "group": "parameters",
+                                          "key": "bodyIsHtml",
+                                          "value": {
+                                            "error": false,
+                                            "proxy": false,
+                                            "check": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": "No",
+                                            "available": []
+                                          },
+                                          "required": false,
+                                          "ref": false,
+                                          "metadata": {
+                                            "type": "list",
+                                            "displayname": "Body is HTML?",
+                                            "choices": [
+                                              {
+                                                "label": "Yes",
+                                                "value": "Yes"
+                                              },
+                                              {
+                                                "label": "No",
+                                                "value": "No"
+                                              }
+                                            ],
+                                            "dependencies": [],
+                                            "optional": false,
+                                            "ordering": 0,
+                                            "index": 4
+                                          },
+                                          "flags": "p"
+                                        }
+                                      }
+                                    },
+                                    "outputs": {
+                                      "extensible": false,
+                                      "rules": {},
+                                      "groupRules": {
+                                        "Email": {
+                                          "extensible": false,
+                                          "reserved": {},
+                                          "index": 0,
+                                          "type": "object"
+                                        }
+                                      },
+                                      "data": {
+                                        "nwwuLubCHr": {
+                                          "id": "nwwuLubCHr",
+                                          "group": "Email",
+                                          "key": "Message ID",
+                                          "value": {
+                                            "error": false,
+                                            "type": "string",
+                                            "collection": false,
+                                            "data": "",
+                                            "available": [
+                                              "string"
+                                            ]
+                                          },
+                                          "ref": false,
+                                          "metadata": {
+                                            "index": 0
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "runtime": {},
+                                    "display": {
+                                      "configRef": "2658e98d-9220-4a7d-bac5-c679626e2f56"
+                                    },
+                                    "comments": "Send an email from your Gmail account",
+                                    "enableNewMetadata": true
+                                  }
+                                },
+                                "pins": {}
+                              }
+                            ],
+                            "model": {},
+                            "orderings": {
+                              "C5LDL8r7d3": [
+                                "w7sNCQkk6x",
+                                "Ys-ri8GzO"
+                              ],
+                              "fipJvxoraY": [
+                                "Ys-ri8GzO",
+                                "OPrfi3MrM"
+                              ]
+                            },
+                            "security_level": "high",
+                            "log": false,
+                            "inheritLog": false,
+                            "group": null,
+                            "templateName": null,
+                            "connector_method_meta": {
+                              "inputs": {},
+                              "outputs": {},
+                              "options": {}
+                            },
+                            "monitor_flo": false
+                          },
+                          "available": [],
+                          "error": false
+                        },
+                        "required": true,
+                        "ref": false,
+                        "metadata": {
+                          "displayname": "Child Flow",
+                          "index": 1
+                        },
+                        "flags": "d"
+                      },
+                      "bf9bQo4uE4": {
+                        "id": "bf9bQo4uE4",
+                        "group": null,
+                        "key": "concurrency",
+                        "value": {
+                          "type": "number",
+                          "collection": false,
+                          "data": 1
+                        },
+                        "required": true,
+                        "ref": false,
+                        "metadata": {
+                          "max": 200,
+                          "min": 1,
+                          "index": 2
+                        },
+                        "flags": "d"
+                      }
+                    }
+                  },
+                  "outputs": {
+                    "extensible": false,
+                    "data": {}
+                  },
+                  "runtime": {}
+                }
+              },
+              "pins": {}
+            }
+          ],
+          "model": {},
+          "orderings": {
+            "FUezh7C83d": [
+              "Cdw5tYmby",
+              "v_amk3ph4F"
+            ]
+          },
+          "cron": {},
+          "security_level": null,
+          "log": true,
+          "inheritLog": true,
+          "scheduled": false,
+          "group": "25cf1e39-8ece-4a6f-80f2-41a83384089b",
+          "templateName": null,
+          "connector_method_meta": {
+            "inputs": {},
+            "outputs": {},
+            "options": {}
+          },
+          "monitor_flo": false
+        }
+      }
+    },
+    "configs": {
+      "03819c27-55b6-4514-a523-d1d1be302bdb": {
+        "id": "03819c27-55b6-4514-a523-d1d1be302bdb",
+        "name": "Okta",
+        "module": "okta",
+        "data": null
+      }
+    },
+    "tables": {},
+    "groups": {
+      "25cf1e39-8ece-4a6f-80f2-41a83384089b": {
+        "id": "25cf1e39-8ece-4a6f-80f2-41a83384089b",
+        "data": {
+          "name": "Versioning for Flows and Folders",
+          "description": "",
+          "media_uri": ""
+        }
+      }
+    }
+  },
+  "checksum": "96c50e80e1ff2a5b9429fc1f07f833b57defb7ed87c99cb60a70826903ff2a1a"
+}
